@@ -13,7 +13,6 @@ A python implementation of the out-of-time cross-validation method presented in:
 """
 import numpy as np
 
-# Include the OutOfTimeSplit class definition
 class OutOfTimeSplit:
 
     def __init__(self, n_splits=5, method='msa', forgetting=False):
@@ -25,7 +24,7 @@ class OutOfTimeSplit:
 
     def split(self, X, y=None, periods=None):
         if type(periods) is int:
-            periods = np.sort(np.tile(np.arange(len(X)), int(len(X)/periods)))[:len(X)]
+            periods = np.arange(len(X))//int(len(X)/periods)
         periods = np.asarray(periods)
         unique_periods = np.unique(periods)
         idxs = np.arange(len(periods))
