@@ -22,7 +22,7 @@ class OutOfTimeSplit:
         self.method = method
         self.forgetting = forgetting
 
-    def split(self, X, y=None, periods=None):
+    def split(self, X, y=None, periods=20):
         if type(periods) is int:
             periods = np.arange(len(X))//int(len(X)/periods)
         periods = np.asarray(periods)
