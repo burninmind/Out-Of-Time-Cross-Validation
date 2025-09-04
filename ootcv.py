@@ -32,7 +32,7 @@ class OutOfTimeSplit:
             origins = np.arange(self.n_splits)
         else:
             origins = np.zeros(self.n_splits, dtype=int)
-        split_points = np.arange(len(unique_periods))[-self.n_splits:]
+        split_points = np.arange(len(unique_periods))[-(self.n_splits+1):-1]
         for origin, split_point in zip(origins, split_points):
             train_periods = unique_periods[origin:split_point]
             if self.method == 'msa':
