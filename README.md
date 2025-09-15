@@ -1,7 +1,7 @@
 # Out-Of-Time-Cross-Validation
 
-This is a python implementation of Out-Of-Time Cross-Validation (OOT-CV) method proposed by Maldonado et al. It includes
-all 4 variants (OOTCV-MSA, OOTCV-SSA, OOTCVF-MSA, OOTCVF-SSA).
+This is an unofficial Python implementation of the Out-Of-Time Cross-Validation (OOT-CV) method proposed by Maldonado et al. It includes
+all four variants (OOTCV-MSA, OOTCV-SSA, OOTCVF-MSA, OOTCVF-SSA).
 
 Be sure to check out the original paper for details of these methods:
 [Out-of-time cross-validation strategies for classification in the presence of dataset shift](https://link.springer.com/article/10.1007/s10489-021-02735-2)
